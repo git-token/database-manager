@@ -1,9 +1,9 @@
 import Promise, { join } from 'bluebird'
 
-import createTransactionReceiptsTable from '../sql/create_transaction_receipts_table.sql'
-import createContractsTable from '../sql/create_contracts_table.sql'
-import createDatabase from '../sql/create_database.sql'
-import useDatabase from '../sql/use_database.sql'
+import createTransactionReceipts from '../sql/create_transaction_receipts.sql'
+import createGitTokenContracts from '../sql/create_gittoken_contracts.sql'
+import createDatabase from '../sql/create_git_token_database.sql'
+import useDatabase from '../sql/use_git_token.sql'
 
 export default function migrations() {
   return new Promise((resolve, reject) => {
@@ -11,8 +11,8 @@ export default function migrations() {
       return this.query(useDatabase);
     }).then(() => {
       return join(
-        this.query(createContractsTable),
-        this.query(createTransactionReceiptsTable)
+        this.query(createGitTokenContracts),
+        this.query(createTransactionReceipts)
       )
     }).then((result) => {
       resolve(result)

@@ -7,7 +7,7 @@
  require('dotenv').config({ path: `${process.cwd()}/.env`})
 
 /**
- * Configuration file for GitToken signer instance
+ * Configuration file for GitToken DataBase Manager instance
  * This file parses the environment variable passed to the docker-compose.yml
  * env_file field, then exports the configuration to be used in the application.
  * @type {Object}
@@ -15,7 +15,6 @@
 
 
 const config = {
-  dbManagerIpcPath: process.env['DB_MANAGER_IPC_PATH'],
   mysqlHost: process.env['MYSQL_HOST'],
   mysqlUser: process.env['MYSQL_USER'],
   mysqlRootPassword: process.env['MYSQL_ROOT_PASSWORD'],

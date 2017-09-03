@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+  dbmgr:
+    build:
+      context: .
+    env_file:
+      - .env
+  mysql:
+    ports:
+      - 3306:3306
+    env_file:
+      - .env
+    image:
+      mysql
