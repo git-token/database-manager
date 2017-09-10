@@ -1,6 +1,6 @@
 {
   "name": "gittoken-database-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GitToken Database Manager",
   "main": "./dist/index",
   "scripts": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "dotenv": "^4.0.0",
+    "gittoken-contracts": "0.0.38",
     "mysql": "^2.14.1"
   },
   "devDependencies": {
