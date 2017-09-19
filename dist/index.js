@@ -25,17 +25,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var GitTokenDatabaseManager = function GitTokenDatabaseManager(_ref) {
   var _this = this;
 
-  var mysqlHost = _ref.mysqlHost;
-  var mysqlUser = _ref.mysqlUser;
-  var mysqlRootPassword = _ref.mysqlRootPassword;
-  var mysqlDatabase = _ref.mysqlDatabase;
+  var mysqlHost = _ref.mysqlHost,
+      mysqlUser = _ref.mysqlUser,
+      mysqlRootPassword = _ref.mysqlRootPassword,
+      mysqlDatabase = _ref.mysqlDatabase;
   (0, _classCallCheck3.default)(this, GitTokenDatabaseManager);
 
   this.migrations = _migrations2.default.bind(this);
-  this.query = _query2.default.bind(this
+  this.query = _query2.default.bind(this);
 
   // Instantiate MySql Connection
-  );this.mysql = _mysql2.default.createConnection({
+  this.mysql = _mysql2.default.createConnection({
     host: mysqlHost,
     user: mysqlUser,
     password: mysqlRootPassword
